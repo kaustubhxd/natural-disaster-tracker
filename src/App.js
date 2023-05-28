@@ -1,7 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
 
 function App() {
+
+
+  useEffect(() => {
+    fetch('https://www.gdacs.org/gdacsapi/api/events/geteventlist/MAP?eventtypes=EQ').then(res => {
+      console.log(res)
+    })
+  })
+
   return (
     <div className="App">
       <header className="App-header">
